@@ -1,0 +1,122 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+/**
+ * Write a description of class Window_Panel here.
+ * 
+ * @author (Danuel Williams) 
+ * @version (v:1.0a)
+ */
+public class Window_Panel extends JPanel 
+{
+   private JPanel pan1, pan2, buttpan;
+   private JLabel lab1;
+   private JTextField fd, fd1, fd2, fd3, fd4;
+   private JButton cancel, backup;
+   private JRadioButton useDefault, noDefault;
+   
+    /**
+     * Constructor for objects of class Window_Panel
+     */
+    private Window_Panel()
+    {
+        //Panel Initialization 
+        pan1 = new JPanel(new BorderLayout());
+        pan2 = new JPanel(new GridLayout(10,2));
+        buttpan = new JPanel();
+        
+        // Label Initialization
+        lab1 = new JLabel("Please enter the Additional Directories from which you want to back up");
+        
+        
+        //Button Initialization 
+        cancel = new JButton("Cancel");
+        backup = new JButton("Backup");
+        
+        //Listeners Initialization 
+        cancel.addActionListener(new BackupListener());
+        backup.addActionListener(new BackupListener());
+        
+        //TextField Initialization
+        fd = new JTextField(20);
+        fd1 = new JTextField(20);
+        fd2 = new JTextField(20);
+        fd3 = new JTextField(20);
+        fd4 = new JTextField(20);
+        
+        //Radio Button Initialization 
+        useDefault = new JRadioButton("Use Default Backup Location");
+        noDefault = new JRadioButton("Do Not Use Default Backup Location");
+        
+        
+        //TextField Manipulation
+        /*fd.setSize(10,10);
+        fd1.setSize(10,10);
+        fd2.setSize(10,10);
+        fd3.setSize(10,10);
+        fd4.setSize(10,10);*/
+        
+        
+        
+        add(pan1);
+        pan1.add(lab1,BorderLayout.NORTH);
+        pan1.add(pan2,BorderLayout.CENTER);
+        pan1.add(buttpan,BorderLayout.SOUTH);
+        pan2.add(new JLabel("From"));
+        pan2.add(new JTextField(20));
+        pan2.add(new JLabel("From:"));
+        pan2.add(new JTextField(20));
+        pan2.add(new JLabel("From:"));
+        pan2.add(new JTextField(20));
+        pan2.add(new JLabel("From:"));
+        pan2.add(new JTextField(20));
+        pan2.add(new JLabel("From:"));
+        pan2.add(new JTextField(20));
+        pan2.add(new JLabel("From:"));
+        pan2.add(new JTextField(20));
+        pan2.add(new JLabel("From:"));
+        pan2.add(new JTextField(20));
+        pan2.add(new JLabel("From:"));
+        pan2.add(new JTextField(20));
+        pan2.add(new JLabel("From:"));
+        pan2.add(new JTextField(20));
+        pan2.add(new JLabel("From:"));
+        pan2.add(new JTextField(20));
+       
+        buttpan.add(backup);
+        buttpan.add(cancel);
+    }
+   
+    private class BackupListener implements ActionListener
+    {
+        public void actionPerformed(ActionEvent event)
+        {
+            if(event.getSource() == backup)
+                { }
+            
+            if(event.getSource() == cancel)
+                {System.exit(1);}
+            
+        }
+    }
+ 
+   
+        
+    /**
+     * An example of a method - replace this comment with your own
+     * 
+     * @param  y   a sample parameter for a method
+     * @return     the sum of x and y 
+     */
+    public static void main(String[] args){
+        JFrame m_Frame = new JFrame("Backup");
+        m_Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        Window_Panel panel = new Window_Panel();
+        
+        m_Frame.getContentPane().add(panel);
+        m_Frame.pack();
+        m_Frame.setVisible(true);
+    }
+}

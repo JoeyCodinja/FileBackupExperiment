@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.params=
+comment0.target=File_Access()
+comment1.params=filePath
+comment1.target=boolean\ filePathVerify(java.lang.String)
+comment1.text=\r\n\ This\ method\ will\ verify\ that\ the\ file\ path\ that\ was\ given\ does\ indeed\ have\ files\ in\ it\ and\ it\ is\ not\ empty\r\n\ \r\n\ @param\ \ filePath\ File\ path\ that\ will\ be\ checked\ by\ this\ method\ \r\n\ @return\ TRUE\ -\ For\ a\ file\ path\ that\ is\ occupied<br>FALSE\ -\ for\ a\ file\ path\ that\ is\ vacant\r\n
+comment2.params=filePath
+comment2.target=int\ fileAmtCheck(java.io.File)
+comment2.text=\r\nThis\ method\ will\ check\ and\ return\ the\ file\ size\ of\ the\ path\ that\ was\ given\r\n@param\ \ filePath\ -\ This\ is\ the\ file\ path\ that\ will\ be\ checked\ by\ this\ method\ \r\n@return\ size\ of\ the\ folder\ which\ is\ given\ by\ the\ file\ path\r\n
+comment3.params=dir
+comment3.target=boolean\ directoryEmpty(java.io.File)
+comment3.text=\r\n@param\ dir\ -\ The\ directory\ to\ be\ checked\ \r\n
+comment4.params=filePathA\ filePathB
+comment4.target=boolean\ fileMove(java.io.File,\ java.io.File)
+comment4.text=\r\n\ Moves\ a\ file\ from\ an\ origin\ path\ to\ a\ destination\ path\ and\ returns\ a\ value\ of\ true\ if\ the\ process\ was\ successful\r\n\ \r\n\ @param\ filePathA\ -\ The\ origin\ file\ address\ from\ which\ the\ files\ will\ be\ copied\ \r\n\ @param\ filePathB\ -\ The\ destination\ file\ address\ to\ which\ the\ files\ will\ be\ copied\r\n\ \r\n\ @return\ true\ -\ Process\ was\ conducted\ successfully\ \r\n\ @return\ false\ -\ There\ was\ an\ error\ and\ the\ file\ was\ not\ copied\ \r\n
+comment5.params=pathName
+comment5.target=java.lang.String[]\ listPath(java.io.File)
+comment5.text=\r\n\ Lists\ the\ files\ at\ a\ certain\ file\ path\ that\ has\ been\ passed\ as\ an\ argument\r\n\ \r\n\ @param\ pathName\ -\ Path\ address\ to\ be\ checked\ \r\n\ @return\ returns\ a\ String[]\ with\ the\ names\ of\ the\ files\ in\ the\ directory\r\n
+numComments=6
